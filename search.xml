@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>PASSAGE 3：JOGGING</title>
+      <link href="/20240603/"/>
+      <url>/20240603/</url>
+      
+        <content type="html"><![CDATA[<p>Every day, in all kinds of weather, thousands of men and women go jogging. Why has jogging—running slowly for long distances—become so popular? Most joggers like it because they have heard it is a very good exercise. Jogging makes the heart stronger and helps people lose weight. It can also help them feel better about themselves. </p><p>How fast should you go? Jog with a friend and talk to each other as you run. If you have difficulty talking, you are going too fast. How far should you jog? Remember not to go too far too soon. In fact you should walk, not run, the first few times. Then do some short jogs, but no more than what you can do comfortably. </p><p>After that, increase your distance a quarter or half of a mile every two weeks or so. Maybe in a few years, you, too, can run in a marathon like thousands of other people do. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> English </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 口语练习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PASSAGE 2：Learning：a Lifelong Career</title>
+      <link href="/20240602/"/>
+      <url>/20240602/</url>
+      
+        <content type="html"><![CDATA[<p>As food is to the body, so is learning to the mind. Our bodies grow and muscles develop with the intake of food. Likewise, we should keep learning day by day to maintain our mental power and expand our intellectual capacity. </p><p>Constant learning supplies us with fuel for driving us to sharpen our power of reasoning, analysis, and judgement. Continuous learning is the best way to keep pace with the times in the information age. </p><p>It is a common misunderstanding to regard school as the only place for the acquisition of knowledge. On the contrary, learning should be an endless process, from the cradle to the grave. With the world changing so fast, to stop learning for just a few days will make a person lag behind. </p><p>Lack of learning will inevitably lead to the stagnation of the mind, or even worse, its fossilization. Therefore, to stay mentally young, we have to take learning as a lifelong career. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> English </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 口语练习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PASSAGE 1：Success in Life</title>
+      <link href="/20240601/"/>
+      <url>/20240601/</url>
+      
+        <content type="html"><![CDATA[<p>Success means different things for different people. Some may equate it with fame, some with wealth and still some with accomplishments. </p><p>For me, it means fulfilling one’s dreams. Whatever your dreams are, you have a goal there and then focus all your attention on it. </p><p>Dreams bring you hope and happiness. In the process of struggling for it, you cry, sweat, complain or even curse, but the joy of harvesting makes you forget all the pains and troubles you have gone through. So an old proverb says that the sweetest fruit is one that has undergone the bitterest ordeal. </p><p>There are several keys to success. First, your goal must be practical and practicable. If you set your goal too high, chances are that you will never attain it. Next, you have to make a plan of doing it. You can take some steps to realize it. Since the process is quite tough, you need to be diligent, patient and persevering. </p><p>Even if you meet with some difficulties or frustrations, just take them in your stride. You can always tell yourself that there is nothing insurmountable. With this will and determination, success is sure to wait for you at the end of the tunnel! </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> English </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 口语练习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>安装Cloudflare WARP+ ，并设置6种模式使用（Linux）</title>
+      <link href="/20240402/"/>
+      <url>/20240402/</url>
+      
+        <content type="html"><![CDATA[<p><strong>前言  Cloudflare 提供的 6 种模式</strong></p><ol><li><code>warp</code>: 连接远端服务器, 并使用 tun 进行全局代理</li><li><code>doh</code>: 仅开启 DNS over HTTPS 功能</li><li><code>warp+doh</code>: 开启 Warp 和 DOH 功能</li><li><code>dot</code>: 仅开启 DNS over TLS 功能</li><li><code>warp+dot</code>: 开启 Warp 和 DOT 功能</li><li><code>proxy</code>：连接远端服务器，并在本地开启代理端口</li></ol><p>如果不理解什么是<code>DOH</code>和<code>DOT</code>，参考 Cloudflare 的介绍：<a href="https://www.cloudflare.com/zh-cn/learning/dns/dns-over-tls/">https://www.cloudflare.com/zh-cn/learning/dns/dns-over-tls/</a> ，也可以自行在互联网搜索其他资料，例如：</p><p>DOH：<a href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS">https://zh.wikipedia.org/wiki/DNS_over_HTTPS</a></p><p>DOT：<a href="https://zh.wikipedia.org/wiki/DNS_over_TLS">https://zh.wikipedia.org/wiki/DNS_over_TLS</a></p><p>带有<code>warp</code>的三种模式，都是依托于 <code>TUN</code> 实现的全局代理。<code>doh</code>和<code>dot</code>又只解决了 DNS 安全问题。</p><p>如果此时需要依托于规则进行流量分配，以上 5 种模式都无法满足。</p><p>如果不理解什么是<code>TUN</code>, 参考这篇文章：<a href="https://www.sobyte.net/post/2022-04/tun-mode/">https://www.sobyte.net/post/2022-04/tun-mode/</a></p><p>Cloudflare Warp提供了Proxy模式，可以不启用全局模式，且在本地监听一个http+socks5混合端口。</p><h1 id="一、cloudflare安装"><a href="#一、cloudflare安装" class="headerlink" title="一、cloudflare安装"></a>一、cloudflare安装</h1><p>官方网址: <a href="https://1.1.1.1/">https://1.1.1.1/</a></p><p>ArchLinux 从AUR安装 cloudflare-warp-bin</p><p>​——以AUR中详细介绍为准</p><h1 id="二、cloudflare使用"><a href="#二、cloudflare使用" class="headerlink" title="二、cloudflare使用"></a>二、cloudflare使用</h1><p><strong>注：第一次使用要在终端应用临时代理</strong></p><p>临时配置：命令行设置——全部走代理</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export all_proxy=&quot;http://局域网ip:1080/&quot;</span><br></pre></td></tr></table></figure><p>测试代理是否生效：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -vv https://www.google.com</span><br></pre></td></tr></table></figure><h2 id="WARP"><a href="#WARP" class="headerlink" title="WARP"></a>WARP</h2><p>只需要 3 个命令就能使用 WARP，先启动 warp-svc.server，第一次使用时需要 register 进行身份验证，然后 connect 将启用客户端，创建从设备到 Cloudflare 网络的 WireGuard 隧道。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">➜ sudo systemctl start warp-svc.service // 启动服务 </span><br><span class="line"></span><br><span class="line">➜ warp-cli register // 进行身份验证 </span><br><span class="line">Success </span><br><span class="line"></span><br><span class="line">➜ warp-cli connect // 连接 </span><br><span class="line">Success</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>此时查看帐户信息可以看到 Account type: Free</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜ warp-cli account </span><br><span class="line">Account type: Free </span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>通过 cloudflare trace 看到 warp&#x3D;on</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜ curl https://www.cloudflare.com/cdn-cgi/trace/ </span><br><span class="line">... </span><br><span class="line">warp=on </span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>至此 WARP 就可以使用了。</p><h2 id="WARP-1"><a href="#WARP-1" class="headerlink" title="WARP+"></a>WARP+</h2><p>使用 WARP+ 需要去 <a href="https://t.me/generatewarpplusbot">Warp+ Bot</a> 获得 <strong>License Key</strong>，然后 set-license使用 Key</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜ warp-cli set-license xxxxxxxx-xxxxxxxx-xxxxxxxx // 得到的 License Key </span><br><span class="line">Success</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这时查看帐户信息，可以看到 Account type: Limited，有 <strong>24598562000000000 B &#x3D; 24.5986 PB</strong> 流量配额，根本用不完。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜ warp-cli account                     </span><br><span class="line">Account type: Limited </span><br><span class="line">... </span><br><span class="line">Quota: 24598562000000000 </span><br><span class="line">Premium Data: 24598562000000000</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>通过 cloudflare trace 看到 warp&#x3D;plus</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜ curl https://www.cloudflare.com/cdn-cgi/trace/ </span><br><span class="line">... </span><br><span class="line">warp=plus </span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>至此 WARP+ 就可以使用了。</p><h2 id="MODE"><a href="#MODE" class="headerlink" title="MODE"></a>MODE</h2><p>mode 有多种，根据需求设置</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">➜ warp-cli set-mode -h </span><br><span class="line">Set the mode </span><br><span class="line"></span><br><span class="line">Usage: warp-cli set-mode &lt;MODE&gt; </span><br><span class="line">或：warp-cli mode &lt;MODE&gt; </span><br><span class="line">Arguments:  </span><br><span class="line">&lt;MODE&gt;  [possible values: warp, doh, warp+doh, dot, warp+dot, proxy, tunnel_only] </span><br><span class="line"></span><br><span class="line">Options:  </span><br><span class="line">-h, --help  Print help</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>我需要 proxy 模式</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜ warp-cli set-mode proxy // 默认端口是 40000, 127.0.0.1:40000 </span><br><span class="line">Success</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>查看一下 ip 信息</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">➜ curl ipinfo.io -x socks5://127.0.0.1:40000 </span><br><span class="line">&#123;  </span><br><span class="line">&quot;ip&quot;: &quot;104.28.xxx.xxx&quot;,  </span><br><span class="line">&quot;city&quot;: &quot;Fremont&quot;,  </span><br><span class="line">&quot;region&quot;: &quot;California&quot;,  </span><br><span class="line">&quot;country&quot;: &quot;US&quot;,  </span><br><span class="line">&quot;loc&quot;: &quot;xx.5483,-xxx.9886&quot;,  </span><br><span class="line">&quot;org&quot;: &quot;AS13335 Cloudflare, Inc.&quot;,  </span><br><span class="line">&quot;postal&quot;: &quot;94536&quot;,  </span><br><span class="line">&quot;timezone&quot;: &quot;America/Los_Angeles&quot;,  </span><br><span class="line">&quot;readme&quot;: &quot;https://ipinfo.io/missingauth&quot; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>更多命令warp-cli –help</p><h1 id="三、开机自启动"><a href="#三、开机自启动" class="headerlink" title="三、开机自启动"></a>三、开机自启动</h1><h2 id="1、将服务设置成开机自启动"><a href="#1、将服务设置成开机自启动" class="headerlink" title="1、将服务设置成开机自启动"></a>1、将服务设置成开机自启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">查看是否设置为开机自启动 </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl <span class="built_in">enable</span> warp-svc.service</span> </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl list-unit-files|grep warp-svc</span> </span><br><span class="line">-------------------------- warp-svc.service                      enabled</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="2、将服务段开启自启取消"><a href="#2、将服务段开启自启取消" class="headerlink" title="2、将服务段开启自启取消"></a>2、将服务段开启自启取消</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl <span class="built_in">disable</span> warp-svc.service</span> </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl list-unit-files|grep warp-svc</span></span><br><span class="line">-------------------------- warp-svc.service                      disabled</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><strong>参考资料</strong></p><ol><li><a href="https://developers.cloudflare.com/warp-client/get-started/linux/">https://developers.cloudflare.com/warp-client/get-started/linux/</a></li><li><a href="https://blog.csdn.net/sayyy/article/details/79276575">https://blog.csdn.net/sayyy/article/details/79276575</a></li><li><a href="https://www.antergone.com/archives/34.html">https://www.antergone.com/archives/34.html</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> ArchLinux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/20240401/"/>
+      <url>/20240401/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
