@@ -10831,11 +10831,11 @@ h1.page-title + .tag-cloud-list {
   font-size: 30px;
 }
 #page-header.not-home-page {
-  height: 400px;
+  height: 65px;
 }
 @media screen and (max-width: 768px) {
   #page-header.not-home-page {
-    height: 280px;
+    height: 65px;
   }
 }
 #page-header #page-site-info {
@@ -10843,6 +10843,9 @@ h1.page-title + .tag-cloud-list {
   top: 200px;
   padding: 0 10px;
   width: 100%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 @media screen and (max-width: 768px) {
   #page-header #page-site-info {
@@ -16145,7 +16148,7 @@ li.card-category-list-item {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   filter: alpha(opacity=60);
   cursor: pointer;
-  filter: blur(1px);
+  filter: blur(0px);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
