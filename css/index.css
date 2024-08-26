@@ -20507,6 +20507,10 @@ html.hide-aside .layout > div:first-child {
 
 #catalog-bar i {
   line-height: inherit;
+  /* 下方为新增 */
+  overflow-x: scroll;
+  margin-top: 14px;
+  padding-bottom: 14px;
 }
 
 #catalog-list {
@@ -20514,6 +20518,9 @@ html.hide-aside .layout > div:first-child {
   display: flex;
   white-space: nowrap;
   overflow-x: scroll;
+  /* 下方为新增 */
+  margin-top: 14px;
+  padding-bottom: 14px;
 }
 
 #catalog-list::-webkit-scrollbar {
@@ -20547,6 +20554,10 @@ a.catalog-more {
   font-weight: bold;
   color: var(--anzhiyu-fontcolor);
   margin-left: 16px;
+  /* 下方为新增 */
+  overflow-x: scroll;
+  margin-top: 14px;
+  padding-bottom: 14px;
 }
 
 a.catalog-more:hover {
@@ -20629,6 +20640,10 @@ a.catalog-more:hover {
 @media screen and (max-width: 768px) {
   #catalog-bar i {
     margin-right: 5px;
+    /* 下方为新增 */
+    overflow-x: scroll;
+    margin-top: 14px;
+    padding-bottom: 14px;
   }
   #categoryBar {
     margin-bottom: 0;
