@@ -13,16 +13,16 @@
       
       <categories>
           
-          <category> 经验分享 </category>
+          <category> 软件操作 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Ubuntu </tag>
+            <tag> Linux </tag>
             
-            <tag> Sublime </tag>
+            <tag> Sublime_Text </tag>
             
         </tags>
       
@@ -40,14 +40,14 @@
       
       <categories>
           
-          <category> 经验分享 </category>
+          <category> 系统相关 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Ubuntu </tag>
+            <tag> Linux </tag>
             
         </tags>
       
@@ -70,6 +70,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -89,6 +95,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -103,12 +115,14 @@
       
       <categories>
           
-          <category> 经验分享 </category>
+          <category> 系统相关 </category>
           
       </categories>
       
       
         <tags>
+            
+            <tag> Linux </tag>
             
             <tag> Xfce </tag>
             
@@ -128,7 +142,7 @@
       
       <categories>
           
-          <category> 软件安装 </category>
+          <category> 软件操作 </category>
           
       </categories>
       
@@ -136,6 +150,8 @@
         <tags>
             
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -228,7 +244,7 @@
       
       <categories>
           
-          <category> 软件安装 </category>
+          <category> 软件操作 </category>
           
       </categories>
       
@@ -238,6 +254,8 @@
             <tag> Ubuntu </tag>
             
             <tag> ArchLinux </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
